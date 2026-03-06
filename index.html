@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HyperBeast Solana RPC</title>
+    <meta name="description" content="Login to managing your highly available, multi-provider Solana RPC endpoints.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Premium Background Effects -->
+    <div class="bg-noise"></div>
+    <div class="background-effects">
+        <div class="glow-orb primary"></div>
+        <div class="glow-orb secondary"></div>
+        
+        <!-- Subtle High-tech Rims/Spheres -->
+        <div class="bg-sphere"></div>
+        <div class="bg-sphere inner"></div>
+
+        <!-- Light beams -->
+        <div class="light-beam left"></div>
+        <div class="light-beam right"></div>
+    </div>
+
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <div class="logo-icon">&alpha;</div>
+            <span class="logo-text">HyperBeast</span>
+        </a>
+        <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <a href="#" class="nav-btn">Dashboard</a>
+    </nav>
+
+    <main class="login-container">
+        <div class="login-card fade-up">
+            <div class="card-header">
+                <div class="badge-container">
+                    <span class="badge">Innovative Web3 Solutions</span>
+                </div>
+                <h1>Welcome Back</h1>
+                <p>Sign in to access your aggregated RPC endpoints and manage your Solana infrastructure.</p>
+            </div>
+            
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" placeholder="name@company.com" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="cb-text">Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn primary-btn">
+                    <span>Login to Dashboard</span>
+                </button>
+            </form>
+            
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <!-- Solana Wallet Button -->
+            <button type="button" class="btn wallet-btn">
+                <svg class="solana-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 22.8462L9.20455 18H28L22.7955 22.8462H4Z" fill="url(#paint0_linear)"/>
+                    <path d="M4 9.15385L9.20455 14H28L22.7955 9.15385H4Z" fill="url(#paint1_linear)"/>
+                    <path d="M4 14L9.20455 9.15385H28L22.7955 14H4Z" fill="url(#paint2_linear)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="5.16129" y1="20.4231" x2="26.0645" y2="20.4231" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00FFA3"/>
+                            <stop offset="1" stop-color="#03E1FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear" x1="5.16129" y1="11.5769" x2="26.0645" y2="11.5769" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00FFA3"/>
+                            <stop offset="1" stop-color="#03E1FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear" x1="5.16129" y1="11.5769" x2="26.0645" y2="11.5769" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00FFA3"/>
+                            <stop offset="1" stop-color="#03E1FF"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                Connect Solana Wallet
+            </button>
+            
+            <p class="signup-prompt">
+                New to HyperBeast? <a href="#">Create an account</a>
+            </p>
+        </div>
+    </main>
+    
+    <script>
+        // Simple script to handle form submission for demo purposes
+        document.querySelector('.login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('.primary-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>Authenticating...</span>';
+            btn.style.opacity = '0.8';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.opacity = '1';
+                // Simulate login success - maybe redirect or show toast
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
